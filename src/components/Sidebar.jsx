@@ -36,6 +36,10 @@ const Sidebar = () => {
     navigateTo("/");
     setShow(!show);
   };
+  const gotoLoginPage = () => {
+    navigateTo("/login");
+    setShow(!show);
+  };
   const gotoDoctorsPage = () => {
     navigateTo("/doctors");
     setShow(!show);
@@ -60,6 +64,7 @@ const Sidebar = () => {
         className={show ? "show sidebar" : "sidebar"}
       >
         <div className="links">
+          <TiHome onClick={gotoLoginPage} />
           <TiHome onClick={gotoHomePage} />
           <FaUserDoctor onClick={gotoDoctorsPage} />
           <MdAddModerator onClick={gotoAddNewAdmin} />
